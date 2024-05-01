@@ -54,7 +54,7 @@ resource "aws_backup_plan" "default" {
       schedule                 = rule.value.schedule
       start_window             = rule.value.start_window
       completion_window        = rule.value.completion_window
-      recovery_point_tags      = module.this.tags
+      #recovery_point_tags      = module.this.tags
       enable_continuous_backup = rule.value.enable_continuous_backup
 
       dynamic "lifecycle" {
